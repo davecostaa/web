@@ -29,12 +29,8 @@ nav {
   opacity: 10;
 }
 
-main {
-  /* background: url("bg.jpg") no-repeat center center;*/
-
-  background-color: #141414;
-  
-  /*height: 92vh;*/
+body {
+background-color: #141414
 }
 
 .nav-list {
