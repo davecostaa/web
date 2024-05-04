@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="barbeariaAlura.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conectando em um Pod Kubernetes - DaveLab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="#">DaveLab</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html"">Início</a></li>
+          <li><a href="kubernetes.html">Kubernetes</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
+    <script src="mobile-navbar.js"></script>
+
+    <p>Descobrindo o nome do Pod:</p><div class=highlight><pre tabindex=0><code class=language-console data-lang=console>kubectl get pod -n &lt;namespace&gt; | kubectl get pod</code></pre></div>
+    <p>Para acessar o Pod:</p><div class=highlight><pre tabindex=0><code class=language-console data-lang=console>kubectl exec --stdin --tty &lt;nome do pod&gt; -n &lt;namespace&gt; -- /bin/bash</code></pre></div>
+    <p>Também é possível entrar com uma sessão do shell:</p><div class=highlight><pre tabindex=0><code class=language-console data-lang=console>kubectl exec --stdin --tty &lt;nome do pod&gt; -n &lt;namespace&gt; -- /bin/sh</code></pre></div>
+    <p>Para rodar o Pod com uma imagem específica e acessá-lo:</p><div class=highlight><pre tabindex=0><code class=language-console data-lang=console>kubectl run -i --tty &lt;nome do pod&gt; --image=&lt;image&gt; -- /bin/bash</code></pre></div>
+    <p>E para excluir o Pod:</p><div class=highlight><pre tabindex=0><code class=language-console data-lang=console>kubectl delete pod &lt;nome do pod&gt;</code></pre></div>
+
+
+    <br>
+    
+
+</body>
+</html>
