@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="term.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conectando em um Pod Kubernetes - DaveLab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <header>
+          <nav class="nav-bar">
+              <div class="logo">
+                  <h1>DAVELAB</h1>
+              </div>
+              <div class="nav-list">
+                  <ul>
+                      <li class="nav-item"><a href="index.html" class="nav-link">INÍCIO</a></li>
+                      <li class="nav-item"><a href="howto.html" class="nav-link">HOW TO</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link">SOBRE</a></li>
+                  </ul>
+              </div>
+              <!-- <div class="login-button">
+                  <button><a href="#">Entrar</a></button>
+              </div>
+              -->
+              <div class="mobile-menu-icon">
+                  <button onclick="menuShow()"><img class="icon" src="menu_white_36dp.svg" alt=""></button>
+              </div>
+          </nav>
+          <div class="mobile-menu">
+              <ul>
+                  <li class="nav-item"><a href="#" class="nav-link">INÍCIO</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">HOW TO</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">SOBRE</a></li>
+              </ul>
+              <!--
+              <div class="login-button">
+                  <button><a href="#">Entrar</a></button>
+              </div>
+              -->
+          </div>
+      </header>
+  
+      <script src="script.js"></script>
+
+    <p>Descobrindo o nome do Pod:</p><div class=highlight><code>kubectl get pod -n &lt;namespace&gt; | kubectl get pod</code></div>
+    <p>Para acessar o Pod:</p><div class=highlight><code>kubectl exec --stdin --tty &lt;nome do pod&gt; -n &lt;namespace&gt; -- /bin/bash</code></div>
+    <p>Também é possível entrar com uma sessão do shell:</p><div class=highlight><code>kubectl exec --stdin --tty &lt;nome do pod&gt; -n &lt;namespace&gt; -- /bin/sh</code></div>
+    <p>Para rodar o Pod com uma imagem específica e acessá-lo:</p><div class=highlight><code>kubectl run -i --tty &lt;nome do pod&gt; --image=&lt;image&gt; -- /bin/bash</code></div>
+    <p>E para excluir o Pod:</p><div class=highlight><code>kubectl delete pod &lt;nome do pod&gt;</code></div>
+
+  </body>
+</html>
