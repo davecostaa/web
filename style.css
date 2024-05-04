@@ -120,7 +120,7 @@ p {
   color: white; 
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-top: 35px;
-  font-size:clamp(0.5em, 2vw, 1.80em);
+  font-size:clamp(1em, 2vw, 1.80em);
   /*font-size:clamp(0.3em, 0.4em + 1vw, 1.80em);*/
   transition: 0.3s;
 }
@@ -146,7 +146,7 @@ pre{
 .highlight pre code{
   background-color: #2a2a2c;
   padding: 5px;
-  font-size:clamp(0.5em, 2vw, 1.80em);
+  font-size:clamp(1em, 2vw, 1.80em);
   /*font-size:clamp(0.3em, 0.4em + 1vw, 1.80em);*/
   border-radius: 5px;
 
